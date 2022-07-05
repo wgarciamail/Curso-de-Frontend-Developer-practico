@@ -27,24 +27,32 @@
             width: 100%;
             height: 100vh;
             display: grid;
+            /* Usado en cssGrid para centrar los elemento
+             horizontal y verticalmente.
+            */
             place-items: center;
         }
+        /* Se ubica el contenido en 3 rows 
+        donde el primero y el último se ajustan al contenido. */
         .form-container{
             display: grid;
             grid-template-rows: auto 1fr auto;
             width: 300px;
         }
+        /* No se muestra en desktop. */
         .logo{
             width: 150px;
             margin-bottom: 48px;
             justify-self: center;
             display: none;
         }
+        /* Alineado a la izquierda. */
         .title{
             font-size: var(--lg);
             margin-bottom: 36px;
             text-align: start;
         }
+        /* Se aplica una alineacion vertica.(columnas). */
         .form{
             display: flex;
             flex-direction: column;
@@ -72,13 +80,17 @@
             cursor: pointer;
             height: 50px;
         }
+        /* Estilo del botón que aplica solo para esta página. */
         .edit-button{
             margin-bottom: 30px;
         }
         @media (max-width:640px) {
+            /* Se coloca del mismo ancho de la pantalla (mobile) */
            .form-container{
             height: 100%;
            }
+           /* Se alinea para que los dos elementos del contenedor queden 
+           pegados al borde superior e inferior de la pantalla. */
            .form {
             height: 100%;
             justify-content: space-between;
